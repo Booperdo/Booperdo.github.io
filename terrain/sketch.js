@@ -14,7 +14,7 @@ function draw() {
   let howMany = width;
   for (let i=bikeLocation; i<bikeLocation+howMany; i++) {
     let rectWidth = width / howMany;
-    rect(rectWidth*(i-bikeLocation), height-rectHeights[i], rectWidth, rectHeights[i])
+    rect(rectWidth*(i-bikeLocation), height-rectHeights[i], rectWidth, rectHeights[i]);
   }
 
   if (keyIsPressed) {
