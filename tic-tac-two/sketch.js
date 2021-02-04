@@ -23,6 +23,21 @@ function setup() {
   h = height/3;
 }
 
+function aiMove() {
+  let move;
+  if (currentPlayer === ai) {
+    for (let i=0; i<3; i++) {
+      for (let j=0; j<3; j++) {
+        if (board[i][j] === " ") {
+          board[i][j] = ai;
+         
+        }
+      }
+    }
+  }
+  currentPlayer = human;
+}
+
 function mousePressed() {
   if (currentPlayer === human) {
     let i = floor(mouseX / w);
@@ -30,6 +45,7 @@ function mousePressed() {
     if (board[i][j] === " ") {
       board[i][j] = human;
       currentPlayer = ai;
+      aiMove();
     }
   }
 }
@@ -44,8 +60,8 @@ function draw() {
   line(0, h*2, width, h*2);
   for(let j=0; j<3; j++) {
     for(let i=0; i<3; i++) {
-      let x = x*i + w/2;
-      let y = y*j + h/2;
+      let x = w*i + w/2;
+      let y = h*j + h/2;
       let spot = board[i][j];
       textSize(32);
       let r = w/4;
