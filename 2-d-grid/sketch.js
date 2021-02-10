@@ -2,9 +2,9 @@
 // Basic Grid
 
 let grid = [[0,1,0,1,0],
-            [0,0,1,0,0],
-            [0,1,0,1,0],
-            [0,0,1,0,0]];
+  [0,0,1,0,0],
+  [0,1,0,1,0],
+  [0,0,1,0,0]];
 
 
 
@@ -16,7 +16,7 @@ let cellHeight;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  grid = createEmptyGrid(30, 20);
+  // grid = createEmptyGrid(30, 20);
 
   rows = grid.length;
   cols = grid[0].length;
